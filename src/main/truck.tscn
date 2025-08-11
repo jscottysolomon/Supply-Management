@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4a5vo7o3qwfl"]
+
+[ext_resource type="Script" uid="uid://bswh88w6j0elk" path="res://src/main/truck.gd" id="1_dmy2s"]
+[ext_resource type="Texture2D" uid="uid://ds33cbrctlk4m" path="res://icon.svg" id="1_tm8ky"]
+
+[node name="Truck" type="Node2D" groups=["Traffic", "Truck"]]
+script = ExtResource("1_dmy2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.07, 1, 0.1475, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tm8ky")

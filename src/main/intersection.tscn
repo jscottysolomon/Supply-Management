@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://df6prep70ms2d"]
+
+[ext_resource type="Script" uid="uid://bdu0ma7iyfsbm" path="res://src/main/intersection.gd" id="1_og2rf"]
+
+[node name="Intersection" type="Node2D" groups=["Intersection", "Traffic"]]
+script = ExtResource("1_og2rf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0, 0, 0, 1)

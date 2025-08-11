@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=3 uid="uid://di7kf5epx8qbp"]
+
+[ext_resource type="PackedScene" uid="uid://0oawx74h6sa1" path="res://src/main/factory.tscn" id="1_5bgc8"]
+[ext_resource type="Script" uid="uid://de3d5pi0g60uh" path="res://src/maps/city_2.gd" id="1_t4yaw"]
+[ext_resource type="PackedScene" uid="uid://de2ifttmbvay0" path="res://src/main/h_road.tscn" id="2_5qp1w"]
+[ext_resource type="PackedScene" uid="uid://c4a5vo7o3qwfl" path="res://src/main/truck.tscn" id="3_t4yaw"]
+[ext_resource type="PackedScene" uid="uid://c0jpl5a6gne6d" path="res://src/main/v_road.tscn" id="4_1d0cr"]
+[ext_resource type="PackedScene" uid="uid://df6prep70ms2d" path="res://src/main/intersection.tscn" id="5_t4yaw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t4yaw")
+
+[node name="Factory3" parent="." instance=ExtResource("1_5bgc8")]
+position = Vector2(1152, 704)
+
+[node name="Factory5" parent="." instance=ExtResource("1_5bgc8")]
+position = Vector2(1792, 1216)
+
+[node name="Intersection9" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(2048, 1344)
+
+[node name="Intersection10" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(2048, 832)
+
+[node name="VRoad6" parent="." instance=ExtResource("4_1d0cr")]
+position = Vector2(2048, 1152)
+
+[node name="Line2D" parent="VRoad6" index="1"]
+position = Vector2(0, -248)
+points = PackedVector2Array(0, 0, 368, -0.00146484)
+
+[node name="Road5" parent="." instance=ExtResource("2_5qp1w")]
+position = Vector2(1472, 832)
+
+[node name="Road6" parent="." instance=ExtResource("2_5qp1w")]
+position = Vector2(1472, 1344)
+
+[node name="Factory4" parent="." instance=ExtResource("1_5bgc8")]
+position = Vector2(1088, 1664)
+
+[node name="Intersection5" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(1408, 1792)
+
+[node name="Intersection8" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(1408, 1344)
+
+[node name="Intersection6" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(768, 1792)
+
+[node name="Intersection7" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(1408, 832)
+
+[node name="VRoad" parent="." instance=ExtResource("4_1d0cr")]
+position = Vector2(128, 512)
+
+[node name="VRoad3" parent="." instance=ExtResource("4_1d0cr")]
+position = Vector2(1408, 1152)
+
+[node name="Line2D" parent="VRoad3" index="1"]
+points = PackedVector2Array(0, 0, 376, -0.00134277)
+
+[node name="VRoad5" parent="." instance=ExtResource("4_1d0cr")]
+position = Vector2(1408, 1600)
+
+[node name="ColorRect" parent="VRoad5" index="0"]
+offset_top = -384.0
+offset_bottom = -256.0
+
+[node name="Line2D" parent="VRoad5" index="1"]
+position = Vector2(0, -264)
+points = PackedVector2Array(88, -0.000244141, 384, -0.00134277)
+
+[node name="VRoad2" parent="." instance=ExtResource("4_1d0cr")]
+position = Vector2(768, 512)
+
+[node name="VRoad4" parent="." instance=ExtResource("4_1d0cr")]
+position = Vector2(768, 1152)
+
+[node name="Line2D" parent="VRoad4" index="1"]
+points = PackedVector2Array(0, 0, 832, -0.00299072)
+
+[node name="Factory2" parent="." instance=ExtResource("1_5bgc8")]
+position = Vector2(512, 704)
+
+[node name="Factory" parent="." instance=ExtResource("1_5bgc8")]
+position = Vector2(512, 64)
+
+[node name="Intersection3" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(768, 832)
+
+[node name="Intersection4" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(128, 832)
+
+[node name="Intersection2" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(768, 192)
+
+[node name="Intersection" parent="." instance=ExtResource("5_t4yaw")]
+position = Vector2(128, 192)
+
+[node name="Road" parent="." instance=ExtResource("2_5qp1w")]
+position = Vector2(192, 192)
+
+[node name="Road2" parent="." instance=ExtResource("2_5qp1w")]
+position = Vector2(192, 832)
+
+[node name="Road3" parent="." instance=ExtResource("2_5qp1w")]
+position = Vector2(832, 832)
+
+[node name="Road4" parent="." instance=ExtResource("2_5qp1w")]
+position = Vector2(832, 1792)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2312, 1320)
+zoom = Vector2(0.25, 0.25)
+
+[node name="Truck" parent="." instance=ExtResource("3_t4yaw")]
+position = Vector2(288, 152)
+
+[editable path="VRoad6"]
+[editable path="VRoad3"]
+[editable path="VRoad5"]
+[editable path="VRoad4"]
